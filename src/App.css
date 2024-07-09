@@ -1,19 +1,73 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #121E30; /* Azul oscuro o #330E0E para rojo oscuro */
+  color: #FFFFFF;
+  line-height: 1.6;
+}
+
 .App {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .record-container {
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .record {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  background: #1A2639; /* Azul muy oscuro o #451818 para rojo muy oscuro */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  border-left: 5px solid #007BFF; /* Azul brillante o #FF073A para rojo brillante */
 }
 
-.record h3 {
-  margin: 0 0 10px;
+input[type="date"], input[type="time"], select, button {
+  font-family: 'Inter', sans-serif;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 2px solid #333;
+  background: #333;
+  color: #FFFFFF;
+  outline: none;
+}
+
+input[type="date"]:focus, input[type="time"]:focus, select:focus, button:focus {
+  border-color: #007BFF; /* Azul brillante o #FF073A para rojo brillante */
+}
+
+button {
+  background-color: #007BFF; /* Azul brillante o #FF073A para rojo brillante */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Oscurecer para azul o usar #cc092f para rojo */
+}
+
+@media (max-width: 768px) {
+  .record {
+    width: 100%;
+  }
+  .record-container {
+    flex-direction: column;
+  }
+}
+
+
+p{
+  margin: 0;
 }

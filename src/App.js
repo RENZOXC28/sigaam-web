@@ -220,22 +220,27 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Registros</h1>
+      <h1>Registros SIGAAM</h1>
+
       <div>
         <label>
-          Día:
-          <input type="date" name="dia" value={filters.dia} onChange={handleFilterChange} />
-        </label>
+        Día: <input type="date" name="dia" value={filters.dia} onChange={handleFilterChange} />
+      </label>
+      </div>
+      <div>
         <label>
-          Hora Entrada:
-          <input type="time" name="horaEntrada" value={filters.horaEntrada} onChange={handleFilterChange} step="3600" />
-        </label>
+        Hora Entrada: <input type="time" name="horaEntrada" value={filters.horaEntrada} onChange={handleFilterChange} step="3600" />
+      </label>
+      </div>
+      <div>
         <label>
-          Hora Salida:
-          <input type="time" name="horaSalida" value={filters.horaSalida} onChange={handleFilterChange} step="3600" />
-        </label>
+        Hora Salida: <input type="time" name="horaSalida" value={filters.horaSalida} onChange={handleFilterChange} step="3600" />
+      </label>
+      </div>
+      <div>
         <button onClick={handleResetFilters}>Mostrar Todos</button>
       </div>
+
       <div className="record-container">
         {filteredRecords.map(record => (
           <Record
